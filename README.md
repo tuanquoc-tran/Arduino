@@ -2,20 +2,19 @@
 
 ### Install avr-gcc toolchain
 
-> sudo apt-get update
-> sudo apt-get upgrade
-
-> sudo apt-get install gcc-avr binutils-avr avr-libc
+>sudo apt-get update
+>sudo apt-get upgrade
+>sudo apt-get install gcc-avr binutils-avr avr-libc
 
 May install gdb-avr. It is useful for in-system debugging/emulation.
 
-> sudo apt-get install gdb-avr
+>sudo apt-get install gdb-avr
 
 ### Install avrdude
 
 avr-gcc only support the software development cross-compile, don't do anything about burning hex file to microcontroller.
 
-> sudo apt-get install avrdude
+>sudo apt-get install avrdude
 
 # Compile simple source code to blink led
 
