@@ -34,9 +34,6 @@ avrdude -c arduino -v -p atmega2560 -cwiring -P /dev/ttyS0 -b115200 -D -Uflash:w
 
 # Example
 
-### Blink led 13 on board
-
-
 ### Control Max 7219
 
 #### SPI protocol
@@ -50,7 +47,6 @@ MISO    <--    MISO (Master in slave out) - (SDO, DOUT)
 CLK     -->    CLK (clock) - (SCK)
 
 CS      -->    CS (Chip select)
-
 
 
 -SPI is a synchronous, full duplex.
@@ -68,6 +64,8 @@ SCK  (PB1)      <-->    CLK
 
 SS  (PB0)       <-->    CS
 
-##### 
+##### Dont use SPI, Only use normally GPIO.
+
+Setup output as Diagram timming of Max7219
 
 

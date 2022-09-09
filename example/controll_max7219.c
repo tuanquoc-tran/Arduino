@@ -7,7 +7,6 @@
 #include <util/delay.h> 
 #include <stdio.h>
 
-
 // Define Pin 
 #define MOSI_PIN    PB2
 #define CS_PIN      PB0
@@ -174,7 +173,6 @@ const uint8_t IMAGES[][8] = {
   0b00000000
 }};
 const int IMAGES_LEN = sizeof(IMAGES)/8;
-
 
 
 int main()
