@@ -8,9 +8,9 @@
 #include <stdio.h>
 
 // Define Pin 
-#define MOSI_PIN    PB2
-#define CS_PIN      PB0
-#define CLK_PIN     PB1
+#define MOSI_PIN    PB0
+#define CS_PIN      PB1
+#define CLK_PIN     PB2
 
 // Define register
 #define     NoOP_REG            0x00

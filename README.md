@@ -27,9 +27,13 @@ avr-objcopy -j .text -j .data -O ihex blink.elf blink.hex
 
 ### Burning
 
-Arduino 2560
+**Arduino 2560**
 
 avrdude -c arduino -v -p atmega2560 -cwiring -P /dev/ttyS0 -b115200 -D -Uflash:w:blink.hex:i
+
+**Arduino 328p**
+
+avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyS0 -b 115200 -U flash:w:example/max7219.hex
 
 
 # Example
@@ -56,13 +60,21 @@ CS      -->    CS (Chip select)
 -Data is synchronized on the rising or falling clock eage.
 
 
-Arduino mega and matrix max7219
+Arduino mega2560 and matrix max7219
 
 MOSI (PB2)      <-->    DIN
 
 SCK  (PB1)      <-->    CLK
 
 SS  (PB0)       <-->    CS
+
+Arduino mega328p and matrix max7219
+
+MOSI_PIN <--> PB0
+
+CS_PIN <--> PB1
+
+CLK_PIN <--> PB2
 
 ##### Dont use SPI, Only use normally GPIO.
 

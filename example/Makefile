@@ -2,7 +2,7 @@ CC = avr-gcc
 
 .PHONY: clean
 # .SILENT: clean
-all:  controll_max7219
+all: control_max7219
 	
 
 clean:
@@ -18,7 +18,7 @@ clean:
 # 	$(CC) -g -mmcu=atmega2560 -o max7219.elf max7219.o
 # 	avr-objcopy -j .text -j .data -O ihex max7219.elf max7219.hex
 
-controll_max7219:
-	$(CC) -g -Os -mmcu=atmega2560 -c controll_max7219.c 
-	$(CC) -g -mmcu=atmega2560 -o controll_max7219.elf controll_max7219.o
-	avr-objcopy -j .text -j .data -O ihex controll_max7219.elf controll_max7219.hex
+control_max7219:
+	$(CC) -g -Os -mmcu=atmega328p -c control_max7219.c 
+	$(CC) -g -mmcu=atmega328p -o control_max7219.elf control_max7219.o
+	avr-objcopy -j .text -j .data -O ihex control_max7219.elf control_max7219.hex
