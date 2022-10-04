@@ -4,8 +4,7 @@
 #endif
 
 #include <avr/io.h>
-#include <util/delay.h> 
-#include <stdio.h>
+#include <util/delay.h> #include <stdio.h>
 
 // Define Pin 
 #define MOSI_PIN    PB0
@@ -44,8 +43,7 @@ void write(uint8_t value)
             PORTB   |= (1 << MOSI_PIN);
         }
         else
-        {
-            // Write Low
+        {            // Write Low
             PORTB   &= (0 << MOSI_PIN);
         }
         value = value << 1;
